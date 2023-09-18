@@ -1,5 +1,6 @@
 package com.sahan.student;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -8,9 +9,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/students")
+@RequiredArgsConstructor
 public class StudentController {
 
-    private StudentService service;
+    private final StudentService service;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
