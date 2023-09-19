@@ -11,7 +11,7 @@ import java.util.List;
 public class SchoolService {
 
     private final SchoolRepository repository;
-    private StudentClient client;
+    private final StudentClient client;
 
     public void saveSchool(School school){
         repository.save(school);

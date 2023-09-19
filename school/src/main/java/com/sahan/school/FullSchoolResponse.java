@@ -15,5 +15,5 @@ public class FullSchoolResponse {
     private String name;
     private  String email;
 
-    List<Student> students;
+    private List<Student> students;
 }

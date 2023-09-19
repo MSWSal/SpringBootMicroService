@@ -20,6 +20,6 @@ public class StudentService {
     }
 
     public List<Student> findAllStudentsBySchool(Integer schoolId) {
-        return repository.findAllSchoolsById(schoolId);
+        return repository.findAllBySchoolId(schoolId);
     }
 }
