@@ -8,6 +8,8 @@ eureka:
 server:
   port: 8070
 spring:
+#  main:
+#    web-application-type: REACTIVE
   application:
     name: schools1
   config:

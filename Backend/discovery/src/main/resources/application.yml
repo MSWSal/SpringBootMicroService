@@ -10,5 +10,7 @@ eureka:
 server:
   port: 8761
 spring:
+#  main:
+#    web-application-type: REACTIVE
   config:
     import: optional:configserver:http://localhost:8888
