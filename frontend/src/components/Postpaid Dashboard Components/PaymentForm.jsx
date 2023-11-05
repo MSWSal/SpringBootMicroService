@@ -1,5 +1,6 @@
 import React from 'react';
 import './PaymentForm.css'
+import { Link } from 'react-router-dom';
 
 const PaymentForm = () => {
     return (
@@ -36,9 +37,17 @@ const PaymentForm = () => {
                             </div>
                         </div>
                         <input type="hidden" name="source" value="web" />
-                        <button type="submit" className="btn btn-warning" id="SubButL" name="SubButL">
-                            Pay Now!
-                        </button>
+                        <div className="btn-container" >
+                            <button type="submit" className="btn btn-warning" id="SubButL" name="SubButL">
+                                Pay Now!
+                            </button>
+                            <Link to="/postpaid"> 
+                            <button type="submit" className="btn btn-warning" id="SubButL" name="SubButL">
+                                Cancel
+                            </button>
+                            </Link>
+                        </div>
+
                     </form>
                 </div>
             </div>

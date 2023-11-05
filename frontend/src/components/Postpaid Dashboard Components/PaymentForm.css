@@ -1,15 +1,23 @@
-/* Center the PaymentForm and add some top margin */
+/* Add some space between buttons */
+.btn-container {
+    display: flex;
+    gap: 10px; /* Adjust the gap size as needed */
+}
+
+/* Rest of your existing styles */
 .payment-form-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin-top: 20px;
+    min-width: 60%;
 }
+/* ... other styles ... */
 
 .hero-image {
-    background-image: url("https://pay.slt.lk/instantpay/paymentgateway.png");
-    background-color: #cccccc;
+
+    
     height: 600px;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,7 +25,7 @@
     position: relative;
 }
 
-.hero-text {
+hero-text {
     text-align: left;
     position: absolute;
     top: 1%;
@@ -47,7 +55,7 @@
 }
 
 .form-control {
-    width: 100%;
+    width: 100%; /* Increase the width to 100% */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
