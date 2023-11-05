@@ -1,9 +1,10 @@
 import React from 'react';
 import './PrepaidCards.css'; // Import the custom CSS file
+import prepaidImage from './prepaid.png'; // Import your image
 
 export default function PrepaidCards() {
     return (
-        <div class="page-container">
+        <div className="page-container">
             <div className="prepaid-cards-container">
                 <div className="prepaid-card">
                     <div className="card-content">
@@ -34,11 +35,14 @@ export default function PrepaidCards() {
                 </div>
             </div>
 
-            <div className="additional-text">
-                <br />
-                <br />
-                <h1>Instantly pay your SLT-MOBITEL Fixed Connection bill online</h1>
-                <p>We accept VISA, Master & Amex card payments. Please note that the payments settled using credit cards issued in foreign countries will not be updated until SLT-MOBITEL receives the payment confirmation from the particular foreign bank.</p>
+            <div className="additional-content">
+                <div className="additional-text">
+                    <h1 className="additional-title">Instantly pay your SRI-CARE Fixed Connection bill online</h1>
+                    <p className="additional-paragraph">We accept VISA, Master & Amex card payments. Please note that the payments settled using credit cards issued in foreign countries will not be updated until SLT-MOBITEL receives the payment confirmation from the particular foreign bank.</p>
+                </div>
+                <div className="additional-image">
+                    <img src={prepaidImage} alt="Your Image" /> {/* Use the imported image */}
+                </div>
             </div>
         </div>
     );

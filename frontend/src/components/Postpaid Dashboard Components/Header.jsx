@@ -16,7 +16,7 @@ export default function Header() {
     return (
         <div className="header">
             <div className="app-title">
-                <h1>Sri-Care</h1>
+                <h1>SRI-CARE</h1>
             </div>
             <div className="actions">
                 <button className="notification-icon" style={{ backgroundImage: `url(${notification})` }}></button>
