@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css'; // Import the custom CSS file
-import notification from './notification.png'
+import NotificationsIcon from '@mui/icons-material/Notifications'; // Import Material-UI notification icon
 
 export default function Header() {
     const [notifications, setNotifications] = useState([
@@ -19,7 +19,7 @@ export default function Header() {
                 <h1>SRI-CARE</h1>
             </div>
             <div className="actions">
-                <button className="notification-icon" style={{ backgroundImage: `url(${notification})` }}></button>
+                <NotificationsIcon className="notification-icon" />
                 <button className="logout-button" onClick={handleLogout}>
                     Logout
                 </button>
