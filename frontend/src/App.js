@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import PostPaymentForm from "./components/Postpaid Dashboard Components/PaymentForm";
 import Prepaid from "./pages/Prepaid Dashboard";
 import PrePaymentForm from "./components/Prepaid Dashboard Components/PaymentForm";
+import Billing from "./pages/Billing";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/postPayment" element={<PostPaymentForm />} />
           <Route path="/prePayment" element={<PrePaymentForm />} />
+          <Route path="/billing" element={<Billing />} />
         </Routes>
       </Router>
     </div>

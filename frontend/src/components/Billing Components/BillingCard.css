@@ -1,0 +1,94 @@
+.billing-card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px 20px 20px; /* Add margin to the left and right */
+  }
+  
+  
+  .billing-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px ;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1; /* Distribute available space equally among cards */
+    height: 200px; /* Set the desired height for the cards */
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-title {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .card-amount {
+    font-size: 24px;
+    color: #0070f3;
+  }
+
+  .billing-card-btn{
+    /* background-color: #0070f3; */
+    width: 100px;
+    height: 40px;
+    color: black;
+    border-radius: 40px;
+    margin-left: 200px;
+  }
+
+  .billing-card-btn:hover{
+    color: #0070f3;
+    background-color: #ffffff;
+   border-color: #0070f3;
+   cursor: pointer;
+}
+  .page-container {
+    margin: 0 20px; /* Adjust the margin values as needed */
+  }
+  
+  /* PrepaidCards.css */
+  
+  .additional-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .additional-text {
+    flex: 1;
+    text-align: left;
+    padding: 20px; /* Add padding to the text content */
+  }
+  
+  additional-image {
+    flex: 1;
+    padding: 20px; /* Add padding to the image content */
+  }
+  
+  additional-title {
+    font-size: 30px; /* Increase the font size */
+    line-height: 1.2; /* Adjust line height for 3 lines */
+  }
+  
+  additional-paragraph {
+    font-size: 20px; /* Increase the font size */
+  }
+  
+
+  .billing-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
