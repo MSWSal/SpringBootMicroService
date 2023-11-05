@@ -5,6 +5,7 @@ import Header from '../components/Postpaid Dashboard Components/Header'
 
 
 export default function PostpaidDashboard() {
+    localStorage.removeItem("bill");
     return (
         <div className="flex flex-col w-full mt-8 ">
             <Header />

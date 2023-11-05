@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import prepaidImage from './prepaid.png';
 import Button from '@mui/material/Button';
 import '../Postpaid Dashboard Components/PrepaidCards.css'
 import ToggleSwitch from '../Postpaid Dashboard Components/ToggleSwitch'; 
+import axios from 'axios'
 
 export default function PostpaidCards() {
+
+    const [res, setRes] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://localhost:8222/api/v1/service")
+            .then(res => {
+                console.log(res.data);
+                setRes(res.data);
+            }).catch(err => {
+                console.log(err);
+            })
+    }, [])
+
     return (
         <div className="page-container">
             <div className="horizontal-bar"></div>
@@ -17,37 +31,15 @@ export default function PostpaidCards() {
             <br /> {/* Add spacing here */}
             <div className="prepaid-cards-container">
                 <br />
-                <div className="prepaid-card">
-                    <div className="card-content">
-                        <p className="card-title">Voice Package</p>
-                        <p className="card-amount">Rs. 1000.00</p>
-                        <ToggleSwitch />
+                {res.map((service, index) => (
+                    <div key={index} className="billing-card">
+                        <div className="card-content">
+                            <p className="card-title">{service.title}</p>
+                            <p className="card-amount">{service.totalAmount}</p>
+                            <ToggleSwitch />
+                        </div>
                     </div>
-                </div>
-
-                <div className="prepaid-card">
-                    <div className="card-content">
-                        <p className="card-title">Data Package</p>
-                        <p className="card-amount">Rs. 1500.00</p>
-                        <ToggleSwitch />
-                    </div>
-                </div>
-
-                <div className="prepaid-card">
-                    <div className="card-content">
-                        <p className="card-title">SMS Package</p>
-                        <p className="card-amount">Rs. 500.00</p>
-                        <ToggleSwitch />
-                    </div>
-                </div>
-
-                <div className="prepaid-card">
-                    <div className="card-content">
-                        <p className="card-title">Roaming Package</p>
-                        <p className="card-amount">Rs. 2000.00</p>
-                        <ToggleSwitch />
-                    </div>
-                </div>
+                ))}
             </div>
 
             <div className="additional-content">

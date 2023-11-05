@@ -9,8 +9,11 @@
 .actions {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Push items to the right corner */
-    flex: 1; /* Allow flex-grow to push items to the right */
+    justify-content: flex-end;
+    /* Push items to the right corner */
+    flex: 1;
+    /* Allow flex-grow to push items to the right */
+    gap: 1rem;
 }
 
 .notification-icon {
@@ -27,18 +30,27 @@
 }
 
 .logout-button {
-    background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient from blue to green */
-    color: #fff; /* White text color */
-    padding: 10px 20px; /* Padding for the button */
-    border: none; /* Remove button border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Cursor on hover */
-    font-weight: bold; /* Bold text */
-    transition: background 0.3s; /* Smooth background transition on hover */
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    /* Gradient from blue to green */
+    color: #fff;
+    /* White text color */
+    padding: 10px 20px;
+    /* Padding for the button */
+    border: none;
+    /* Remove button border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor on hover */
+    font-weight: bold;
+    /* Bold text */
+    transition: background 0.3s;
+    /* Smooth background transition on hover */
 }
 
 .logout-button:hover {
-    background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient on hover */
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    /* Gradient on hover */
 }
 
 .header {
@@ -50,15 +62,24 @@
 }
 
 .app-title {
-    background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient from blue to green */
-    -webkit-background-clip: text; /* Clip text to the background gradient */
-    color: transparent; /* Make text transparent */
-    display: inline; /* Make the text display inline */
-    font-size: 24px; /* Adjust the font size */
-    font-weight: bold; /* Adjust the font weight */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    cursor: pointer; /* Add cursor pointer on hover */
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    /* Gradient from blue to green */
+    -webkit-background-clip: text;
+    /* Clip text to the background gradient */
+    color: transparent;
+    /* Make text transparent */
+    display: inline;
+    /* Make the text display inline */
+    font-size: 24px;
+    /* Adjust the font size */
+    font-weight: bold;
+    /* Adjust the font weight */
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margin */
+    cursor: pointer;
+    /* Add cursor pointer on hover */
 }
 
 .app-title:hover {

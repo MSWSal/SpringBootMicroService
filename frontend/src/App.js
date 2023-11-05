@@ -16,6 +16,7 @@ function App() {
             {/* Define your routes here */}
           <Route path="/postpaid" element={<Postpaid />} />
           <Route path="/prepaid" element={<Prepaid />} />
+          <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/postPayment" element={<PostPaymentForm />} />
           <Route path="/prePayment" element={<PrePaymentForm />} />

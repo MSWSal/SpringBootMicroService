@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BillingModal from "./BillingModal"; // Import the BillingModal component
 import billingImage from "./billing.png";
 import "./BillingCard.css";
+import axios from 'axios'
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material";
+import { useNavigate } from 'react-router-dom'
 
 function BillingCard() {
+  const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedBill, setSelectedBill] = useState(null);
+  const [res, setRes] = useState([]);
 
   // Function to open the modal and set the selected bill
   const openModal = (bill) => {
@@ -20,19 +24,36 @@ function BillingCard() {
     setIsModalOpen(false);
   };
 
-  const billingData = [
-    { title: "Bill 01", totalAmount: "Rs. 1000.00", date: "2023-11-31" },
-    { title: "Bill 02", totalAmount: "Rs. 5000.00", date: "2023-12-15" },
-    { title: "Bill 03", totalAmount: "Rs. 1500.00", date: "2023-10-31" },
-    { title: "Bill 04", totalAmount: "Rs. 1450.00", date: "2023-12-15" },
-    // Add more billing data as needed
-  ];
+  useEffect(() => {
+    axios.get("http://localhost:8222/api/v1/billing")
+      .then(res => {
+        console.log(res.data);
+        setRes(res.data);
+      }).catch(err => {
+        console.log(err);
+      })
+  }, [])
+
+  const handlePay = () => {
+    const user = localStorage.getItem("user");
+    const numericPart = parseFloat(selectedBill.totalAmount.replace("Rs.", "").trim());
+    
+    if (user === "postpaid") {
+      localStorage.setItem("bill", numericPart);
+      navigate("/postPayment");
+    }
+    if (user === "prepaid") {
+      localStorage.setItem("bill", numericPart);
+      navigate("/prePayment");
+    }
+
+  }
 
   return (
     <div>
       <div className="page-container">
         <div className="billing-card-container">
-          {billingData.map((bill, index) => (
+          {res.map((bill, index) => (
             <div key={index} className="billing-card">
               <div className="card-content">
                 <p className="card-title">{bill.title}</p>
@@ -78,7 +99,7 @@ function BillingCard() {
           </DialogContent>
           <DialogActions>
             <Button onClick={closeModal}>Cancel</Button>
-            <Button color="primary">Pay</Button>
+            <Button color="primary" onClick={handlePay}>Pay</Button>
           </DialogActions>
         </Dialog>
       </div>

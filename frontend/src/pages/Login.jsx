@@ -6,10 +6,16 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
+
 
 const Login = () => {
+
+   const navigate = useNavigate();
+
    const [inputs, setInputs] = useState({
-      email: "",
+      mobile: "",
       password: "",
    });
 
@@ -20,6 +26,27 @@ const Login = () => {
    const handleSubmit = (e) => {
       e.preventDefault();
       console.log({ inputs });
+      console.log(inputs.mobile, inputs.password)
+
+      axios.post("http://localhost:8222/api/v1/authentication/"+inputs.mobile+"/"+inputs.password)
+         .then(res => {
+            console.log(res.data);
+            if (res.data.status === "POSTPAID SUCCESS") {
+               navigate("/postpaid");
+               localStorage.setItem("user", "postpaid");
+            }
+            else if (res.data.status === "PREPAID SUCCESS") {
+               navigate("/prepaid");
+               localStorage.setItem("user", "prepaid");
+            }
+            else {
+               console.log(res.data.status);
+            }
+
+         }).catch(err => {
+            console.log(err);
+         })
+
    };
 
    return (
@@ -44,12 +71,12 @@ const Login = () => {
                   margin="normal"
                   required
                   fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
+                  id="mobile"
+                  label="Mobile Number"
+                  name="mobile"
+                  autoComplete="mobile"
                   onChange={handleChange}
-                  value={inputs.email}
+                  value={inputs.mobile}
                   autoFocus
                />
                <TextField

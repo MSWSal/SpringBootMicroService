@@ -11,16 +11,16 @@
         <module name="notification" />
         <module name="discovery" />
         <module name="service" />
-        <module name="school (1)" />
         <module name="payment" />
         <module name="gateway" />
-        <module name="school (2)" />
         <module name="authentication" />
         <module name="billing" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="school" target="17" />
+      <module name="school (1)" target="17" />
+      <module name="school (2)" target="17" />
       <module name="student" target="17" />
     </bytecodeTargetLevel>
   </component>
