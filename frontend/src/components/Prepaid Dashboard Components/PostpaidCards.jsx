@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import prepaidImage from './prepaid.png';
 import Button from '@mui/material/Button';
 import '../Postpaid Dashboard Components/PrepaidCards.css'
+import ToggleSwitch from '../Postpaid Dashboard Components/ToggleSwitch'; 
 
 export default function PostpaidCards() {
     return (
@@ -18,29 +19,33 @@ export default function PostpaidCards() {
                 <br />
                 <div className="prepaid-card">
                     <div className="card-content">
-                        <p className="card-title">Total Balance</p>
+                        <p className="card-title">Voice Package</p>
                         <p className="card-amount">Rs. 1000.00</p>
+                        <ToggleSwitch />
                     </div>
                 </div>
 
                 <div className="prepaid-card">
                     <div className="card-content">
-                        <p className="card-title">Monthly Income</p>
+                        <p className="card-title">Data Package</p>
                         <p className="card-amount">Rs. 1500.00</p>
+                        <ToggleSwitch />
                     </div>
                 </div>
 
                 <div className="prepaid-card">
                     <div className="card-content">
-                        <p className="card-title">Total Withdraw</p>
+                        <p className="card-title">SMS Package</p>
                         <p className="card-amount">Rs. 500.00</p>
+                        <ToggleSwitch />
                     </div>
                 </div>
 
                 <div className="prepaid-card">
                     <div className="card-content">
-                        <p className="card-title">Card 4 Title</p>
+                        <p className="card-title">Roaming Package</p>
                         <p className="card-amount">Rs. 2000.00</p>
+                        <ToggleSwitch />
                     </div>
                 </div>
             </div>

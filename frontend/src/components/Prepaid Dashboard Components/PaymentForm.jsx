@@ -41,7 +41,7 @@ const PaymentForm = () => {
                             <button type="submit" className="btn btn-warning" id="SubButL" name="SubButL">
                                 Pay Now!
                             </button>
-                            <Link to="/postpaid"> 
+                            <Link to="/prepaid"> 
                             <button type="submit" className="btn btn-warning" id="SubButL" name="SubButL">
                                 Cancel
                             </button>

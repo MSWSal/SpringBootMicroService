@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'; // Import Link from React Router
 import './PrepaidCards.css'; // Import the custom CSS file
 import prepaidImage from './prepaid.png'; // Import your image
 import Button from '@mui/material/Button';
+import ToggleSwitch from './ToggleSwitch'; 
 
 export default function PrepaidCards() {
     return (
@@ -18,29 +19,33 @@ export default function PrepaidCards() {
             <br />
             <div className="prepaid-card">
                     <div className="card-content">
-                        <p className="card-title">Total Balance</p>
+                        <p className="card-title">Voice Package</p>
                         <p className="card-amount">Rs. 1000.00</p>
+                        <ToggleSwitch />
                     </div>
                 </div>
 
                 <div className="prepaid-card">
                     <div className="card-content">
-                        <p className="card-title">Monthly Income</p>
+                        <p className="card-title">Data Package</p>
                         <p className="card-amount">Rs. 1500.00</p>
+                        <ToggleSwitch />
                     </div>
                 </div>
 
                 <div className="prepaid-card">
                     <div className="card-content">
-                        <p className="card-title">Total Withdraw</p>
+                        <p className="card-title">SMS Package</p>
                         <p className="card-amount">Rs. 500.00</p>
+                        <ToggleSwitch />
                     </div>
                 </div>
 
                 <div className="prepaid-card">
                     <div className="card-content">
-                        <p className="card-title">Card 4 Title</p>
+                        <p className="card-title">Roaming Package</p>
                         <p className="card-amount">Rs. 2000.00</p>
+                        <ToggleSwitch />
                     </div>
                 </div>
             </div>
