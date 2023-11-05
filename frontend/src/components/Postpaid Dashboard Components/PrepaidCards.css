@@ -52,10 +52,16 @@
   padding: 20px; /* Add padding to the text content */
 }
 
-additional-image {
+.additional-image {
   flex: 1;
   padding: 20px; /* Add padding to the image content */
 }
+
+.additional-image img {
+  width: 100%; /* Set the image width to 100% of the container width */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
 
 additional-title {
   font-size: 30px; /* Increase the font size */
@@ -71,4 +77,26 @@ additional-paragraph {
   background: linear-gradient(45deg, #3498db, #2ecc71); /* Customize the gradient colors */
   color: white;
   margin-top: 20px; /* Add margin for spacing */
+}
+/* Styling for the horizontal bar */
+.horizontal-bar {
+  width: 100%;
+  height: 5px; /* Set the height of the bar */
+  background: linear-gradient(to right, #3498db, #2ecc71); /* Use your desired gradient colors */
+}
+
+/* Styling for the dashboard title container */
+.dashboard-title-container {
+  text-align: center; /* Center the text */
+  background: white; /* Set a background color (you can change it) */
+  display: inline-block;
+  padding: 0 20px; /* Add some padding to make it more visible */
+  margin-top: -15px; /* Adjust the margin to overlap the bar */
+}
+
+/* Styling for the dashboard title lines */
+.dashboard-title-lines {
+  border-top: 2px solid #3498db; /* Top line with your desired color */
+  border-bottom: 2px solid #2ecc71; /* Bottom line with your desired color */
+  line-height: 0.1; /* Ensure the lines don't take up extra space */
 }
