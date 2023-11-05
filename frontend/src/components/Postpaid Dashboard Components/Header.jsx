@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css'; // Import the custom CSS file
+import notification from './notification.png'
 
 export default function Header() {
     const [notifications, setNotifications] = useState([
@@ -15,16 +16,13 @@ export default function Header() {
     return (
         <div className="header">
             <div className="app-title">
-                <h1>Your App Name</h1>
+                <h1>Sri-Care</h1>
             </div>
             <div className="actions">
-                <button className="notification-button">
-                    {/* Add your notification icon or image */}
-                </button>
+                <button className="notification-icon" style={{ backgroundImage: `url(${notification})` }}></button>
                 <button className="logout-button" onClick={handleLogout}>
                     Logout
                 </button>
-
             </div>
         </div>
     );

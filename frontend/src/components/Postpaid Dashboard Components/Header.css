@@ -4,81 +4,63 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-  }
-  
-  .notifications {
-    display: flex;
-    align-items: center;
-  }
-  
-  .notification-icon {
-    /* Add styles for the notification icon or image */
-  }
-  
-  .notification-list {
-    margin-left: 10px;
-  }
-  
-  .notification-list h3 {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .notification-list ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .notification-list li {
-    padding: 5px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .notification-list li:hover {
-    background-color: #f2f2f2;
-  }
-  
-  .user-menu {
-    display: flex;
-    align-items: center;
-  }
-  
-  .user-avatar {
-    /* Add styles for the user avatar or image */
-  }
-  
-  .user-dropdown ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .user-dropdown li {
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .user-dropdown li:hover {
-    background-color: #f2f2f2;
-  }
+}
 
-  /* Add styles for the logout button */
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Push items to the right corner */
+    flex: 1; /* Allow flex-grow to push items to the right */
+}
+
+.notification-icon {
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    /* You can add more styles as needed */
+}
+
+.notification-icon:hover {
+    /* Add hover styles here */
+}
+
 .logout-button {
-    background-color: #f44336; /* Red background color */
+    background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient from blue to green */
     color: #fff; /* White text color */
     padding: 10px 20px; /* Padding for the button */
     border: none; /* Remove button border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Cursor on hover */
     font-weight: bold; /* Bold text */
-    transition: background-color 0.3s; /* Smooth color transition on hover */
-  }
-  
-  /* Style the button on hover */
-  .logout-button:hover {
-    background-color: #d32f2f; /* Darker red color on hover */
-  }
-  
-  /* You can add more styles as needed */
-  
-  
+    transition: background 0.3s; /* Smooth background transition on hover */
+}
+
+.logout-button:hover {
+    background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient on hover */
+}
+
+.header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.app-title {
+    background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient from blue to green */
+    -webkit-background-clip: text; /* Clip text to the background gradient */
+    color: transparent; /* Make text transparent */
+    display: inline; /* Make the text display inline */
+    font-size: 24px; /* Adjust the font size */
+    font-weight: bold; /* Adjust the font weight */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    cursor: pointer; /* Add cursor pointer on hover */
+}
+
+.app-title:hover {
+    /* Add hover styles if desired */
+}
