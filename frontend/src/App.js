@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          {/* Define your routes here */}
+            {/* Define your routes here */}
           <Route path="/postpaid" element={<Postpaid />} />
           <Route path="/prepaid" element={<Prepaid />} />
           <Route path="/login" element={<Login />} />
