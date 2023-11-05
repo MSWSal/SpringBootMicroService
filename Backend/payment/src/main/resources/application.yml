@@ -1,3 +1,4 @@
+
 eureka:
   instance:
     hostname: localhost
@@ -6,17 +7,17 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 
 server:
-  port: 8090
+  port: 8094
 spring:
-#  main:
-#    web-application-type: REACTIVE
+  #  main:
+  #    web-application-type: REACTIVE
   application:
-    name: students1
+    name: payment
   config:
     import: optional:configserver:http://localhost:8888
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/students
+    url: jdbc:postgresql://localhost:5432/payment
     username: postgres
     password: root
   jpa:

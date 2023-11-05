@@ -8,10 +8,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
-        <module name="school (1)" />
-        <module name="gateway" />
+        <module name="notification" />
         <module name="discovery" />
+        <module name="service" />
+        <module name="school (1)" />
+        <module name="payment" />
+        <module name="gateway" />
         <module name="school (2)" />
+        <module name="authentication" />
+        <module name="billing" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,12 +26,17 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="authentication" options="-parameters" />
+      <module name="billing" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="discovery" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="notification" options="-parameters" />
+      <module name="payment" options="-parameters" />
       <module name="school" options="-parameters" />
       <module name="school (1)" options="-parameters" />
       <module name="school (2)" options="-parameters" />
+      <module name="service" options="-parameters" />
       <module name="student" options="-parameters" />
     </option>
   </component>
