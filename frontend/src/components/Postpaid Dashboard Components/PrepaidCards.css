@@ -65,3 +65,10 @@ additional-title {
 additional-paragraph {
   font-size: 20px; /* Increase the font size */
 }
+/* PrepaidCards.css */
+
+.pay-now-button {
+  background: linear-gradient(45deg, #3498db, #2ecc71); /* Customize the gradient colors */
+  color: white;
+  margin-top: 20px; /* Add margin for spacing */
+}

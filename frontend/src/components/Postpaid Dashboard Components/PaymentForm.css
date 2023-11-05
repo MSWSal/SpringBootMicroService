@@ -1,0 +1,73 @@
+/* Center the PaymentForm and add some top margin */
+.payment-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 20px;
+}
+
+.hero-image {
+    background-image: url("https://pay.slt.lk/instantpay/paymentgateway.png");
+    background-color: #cccccc;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: left;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: black;
+}
+
+/* Button styling */
+.btn-warning {
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(to right, #2ecc71, #3498db);
+}
+
+/* Input field and label styling */
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Additional styling for labels and form elements */
+.form-compact label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Adjust form heading and hr styling */
+h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+}

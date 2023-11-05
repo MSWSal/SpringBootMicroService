@@ -3,6 +3,7 @@ import PrepaidCards from '../components/Postpaid Dashboard Components/PrepaidCar
 import Header from '../components/Postpaid Dashboard Components/Header'
 
 
+
 export default function PostpaidDashboard() {
     return (
         <div className="flex flex-col w-full mt-8 ">
@@ -14,7 +15,6 @@ export default function PostpaidDashboard() {
                 </div>
                 {/* Right side for WalletGraph */}
                 <div className="col-span-2 ">
-                    {/* <WalletGraph /> */}
                 </div>
             </div>
         </div>
